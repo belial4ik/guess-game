@@ -27,8 +27,10 @@ function showNumber() {
   totalBox.appendChild(div)
   inputNumber.value = ''
 
-  if(num != secretNumber && num > 0 && num < 10) {
-    attempts.push(num)
+  if(num != secretNumber) {
+    if (num > 0 && num < 10) {
+      attempts.push(num)      
+    }
   } else {
     const changeText = document.querySelector('.change-text');
     changeText.innerText = 'Congrats'
