@@ -8,8 +8,6 @@ const secretNumber = +Math.floor((Math.random() * 9) + 1)
 const attempts = []
 
 button.addEventListener("click", showNumber)
-console.dir(inputNumber)
-inputNumber.autofocus = true
 
 function showNumber() {
   const attemptScoreDiv = document.createElement('div')
