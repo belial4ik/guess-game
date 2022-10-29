@@ -27,13 +27,10 @@ function showNumber() {
   totalBox.appendChild(div)
   inputNumber.value = ''
 
-  if(num != secretNumber) {  
-    if(num > 0 && num < 10) {
-      attempts.push(num)
-    } 
+  if(num != secretNumber && num > 0 && num < 10) {
+    attempts.push(num)
   } else {
     const changeText = document.querySelector('.change-text');
-    const number = document.querySelector('#number');
     changeText.innerText = 'Congrats'
     changeText.style.color = 'green'
     number.innerText = secretNumber
@@ -41,8 +38,9 @@ function showNumber() {
     attemptScoreH2.innerText = `you made ${attempts.length} attempts`
     scoreBox.appendChild(attemptScoreDiv)
     button.disabled = true
-    button.style.background = 'tomato'
-    button.innerText = 'X'
+    button.style.display = 'none'
+    inputNumber.style.display = 'none'
+    number.style.fontSize = '200px'
   }   
 }
 
